@@ -37,6 +37,6 @@ https://github.com/psf/black/
 
 # AI generated photos
 
-https://generated.photos/
+https://github.com/python-pillow/Pillow
 
 
