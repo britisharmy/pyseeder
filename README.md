@@ -16,3 +16,15 @@ Given a start point, initial bearing, and distance, this will calculate the dest
 
 
 where	φ is latitude, λ is longitude, θ is the bearing (clockwise from north), δ is the angular distance d/R; d being the distance travelled, R the earth’s radius
+
+# tools
+
+https://github.com/aio-libs/aiomysql
+
+https://github.com/aio-libs/aiohttp
+
+https://github.com/mosquito/aiofile
+
+# code formatting 
+
+https://github.com/psf/black/
