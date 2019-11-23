@@ -1,5 +1,5 @@
 class Seeder:
-  #worlrtrack.io/laravel/password,worlrtrack.io/ionauth/password,worlrtrack.io/django/password
+  #worltrack.io/laravel/password,worltrack.io/ionauth/password,worltrack.io/django/password,worldtrack.io/googledrive/randomimage
   def __init__(self, firstname, lastname,salutation,gender,coordinates,image,telephone_number,country,unix_timestamp,date_of_birth,numbers,decimals,address,email,django_password,paragraph,credit_card_number,cvv,day,month,year,username,random_string,postal_code,json_object,post_title,random_list_item,laravel_password,ion_auth_password:
 
     self.firstname = firstname
