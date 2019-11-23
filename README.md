@@ -34,3 +34,9 @@ https://github.com/psf/black/
 -Django
 -Laravel
 -Ion auth
+
+# AI generated photos
+
+https://generated.photos/
+
+
