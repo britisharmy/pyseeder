@@ -1,5 +1,5 @@
 class Seeder:
-
+ #default file param in every method
   def __init__(self, firstname, lastname,salutation,gender,coordinates,image,telephone_number,country,unix_timestamp,date_of_birth,numbers,decimals,address,email,django_password,paragraph,credit_card_number,cvv,day,month,year,username,random_string,postal_code,json_object,post_title,random_list_item:
 
     self.firstname = firstname
