@@ -28,3 +28,9 @@ https://github.com/mosquito/aiofile
 # code formatting 
 
 https://github.com/psf/black/
+
+# password encryption support
+
+-Django
+-Laravel
+-Ion auth
