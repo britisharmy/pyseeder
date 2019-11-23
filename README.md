@@ -31,9 +31,9 @@ https://github.com/psf/black/
 
 # password encryption support
 
--Django
--Laravel
--Ion auth
+- Django
+- Laravel
+- Ion auth
 
 # AI generated photos
 
