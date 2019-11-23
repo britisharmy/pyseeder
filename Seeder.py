@@ -1,5 +1,10 @@
 class Seeder:
   #default password for ion_auth,laravel and django
+  #ion auth:: password :: $2y$08$200Z6ZZbp3RAEXoaWcMA6uJOFicwNZaqk4oDhqTUiFXFe63MG.Daa
+  #laravel:: JohnDoe :: $2y$10$jSAr/RwmjhwioDlJErOk9OQEO7huLz9O6Iuf/udyGbHPiTNuB3Iuy 
+  #laravel source: https://stackoverflow.com/questions/22846897/how-to-create-a-laravel-hashed-password
+  #django:: :: 
+  
   def __init__(self, firstname, lastname,salutation,gender,coordinates,image,telephone_number,country,unix_timestamp,date_of_birth,numbers,decimals,address,email,django_password,paragraph,credit_card_number,cvv,day,month,year,username,random_string,postal_code,json_object,post_title,random_list_item,laravel_password,ion_auth_password:
 
     self.firstname = firstname
