@@ -78,10 +78,13 @@ class Seeder:
     
     #give range
     def numbers(self):
-    print("Hello my name is " + self.name)
+    #random from range
+    print (random.randrange(20, 50, 3)) 
+    #random from list
+    print (random.choice([1, 4, 8, 10, 3])) 
 
     def decimals(self):
-    print("Hello my name is " + self.name)
+    return float(decimal.Decimal(random.randrange(155, 389))/100)
 
     def address(self):
     print("Hello my name is " + self.name)
