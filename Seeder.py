@@ -14,6 +14,7 @@ class Seeder:
   #laravel source: https://stackoverflow.com/questions/22846897/how-to-create-a-laravel-hashed-password
   #django:: 666monkeysAndDogs777 :: pbkdf2_sha256$20000$L7uq6goI1HIl$RYqywMgPywhhku/YqIxWKbpxODBeczfLm5zthHjNSSk=
   #django: source :: https://codeday.me/en/qa/20190312/3420.html
+  #validate excel file i.e sms numbers columns, empty spaces,unformatted numbers etc
   
   def __init__(self, firstname, lastname,salutation,gender,coordinates,image,telephone_number,country,unix_timestamp,date_of_birth,numbers,decimals,address,email,django_password,paragraph,credit_card_number,cvv,day,month,year,username,random_string,postal_code,json_object,post_title,random_list_item,laravel_password,ion_auth_password:
 
