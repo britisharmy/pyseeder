@@ -110,7 +110,20 @@ class Seeder:
     print("Hello my name is " + self.name)
 
     def json_object(self):
-    print("Hello my name is " + self.name)
+    x = {
+      "name": "John",
+      "age": 30,
+      "married": True,
+      "divorced": False,
+      "children": ("Ann","Billy"),
+      "pets": None,
+      "cars": [
+        {"model": "BMW 230", "mpg": 27.5},
+        {"model": "Ford Edge", "mpg": 24.1}
+      ]
+    }
+
+    print(json.dumps(x))
 
     def random_list_item(self):
     print("Hello my name is " + self.name)
