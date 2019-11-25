@@ -46,10 +46,20 @@ class Seeder:
     self.ion_auth_password = ion_auth_password
 
     def firstname(self):
-    print("Hello my name is " + self.name)
+    async with AIOFile("file.csv", 'r') as afp:
+        async for line in LineReader(afp):
+            #print(line[:10])
+            array = line.split(',')
+            first_item = array[0]
+            print(first_item)
 
     def lastname(self):
-    print("Hello my name is " + self.name)
+    async with AIOFile("file.csv", 'r') as afp:
+        async for line in LineReader(afp):
+            #print(line[:10])
+            array = line.split(',')
+            first_item = array[0]
+            print(first_item)
 
     def salutation(self):
     salut = ['Mr', 'Mrs', 'Ms', 'Dr', 'Sir']
