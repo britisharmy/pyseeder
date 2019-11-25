@@ -2,10 +2,10 @@ import asyncio
 import json
 import time
 import random
+import secrets
 import string
 import uuid
 from PIL import Image, ImageDraw, ImageFont
-import secrets
 from aiofile import AIOFile, LineReader, Writer
 
 
@@ -39,7 +39,8 @@ class Seeder:
     return secrets.choice(salut)
 
     def gender(self):
-    print("Hello my name is " + self.name)
+    g = ['Female', 'Male']
+    return secrets.choice(g)
 
     def coordinates(self):
     print("Hello my name is " + self.name)
@@ -49,6 +50,7 @@ class Seeder:
 
     def telephone_number(self):
     print("Hello my name is " + self.name)
+    #str_join('Pine', 'apple', 3)  # Returns : Pineapple3
 
     def country(self):
     print("Hello my name is " + self.name)
@@ -58,6 +60,7 @@ class Seeder:
 
     def date_of_birth(self):
     print("Hello my name is " + self.name)
+    #1987 to 2000
     
     #give range
     def numbers(self):
@@ -74,6 +77,7 @@ class Seeder:
 
     def email(self):
     print("Hello my name is " + self.name)
+    #126.com
 
     def django_password(self):
     print("Hello my name is " + self.name)
