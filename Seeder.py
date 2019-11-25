@@ -17,40 +17,6 @@ class Seeder:
   #django:: 666monkeysAndDogs777 :: pbkdf2_sha256$20000$L7uq6goI1HIl$RYqywMgPywhhku/YqIxWKbpxODBeczfLm5zthHjNSSk=
   #django: source :: https://codeday.me/en/qa/20190312/3420.html
   #validate excel file i.e sms numbers columns, empty spaces,unformatted numbers etc
-  
-  def __init__(self, firstname, lastname,salutation,gender,coordinates,image,telephone_number,country,unix_timestamp,date_of_birth,numbers,decimals,address,email,django_password,paragraph,credit_card_number,cvv,day,month,year,username,random_string,postal_code,json_object,post_title,random_list_item,laravel_password,ion_auth_password:
-
-    self.firstname = firstname
-    self.lastname = lastname
-    self.salutation = salutation
-    self.gender = gender
-    self.coordinates = coordinates
-    self.image = image
-    self.telephone_number = telephone_number
-    self.country = country
-    self.unix_timestamp = unix_timestamp
-    self.date_of_birth = date_of_birth
-    self.numbers = numbers
-    self.decimals = decimals
-    #choose decimal places
-    self.address = address
-    #english style addresses
-    self.email = email
-    self.django_password = django_password
-    self.paragraph = paragraph
-    self.credit_card_number = credit_card_number
-    self.cvv = cvv
-    self.day = day
-    self.month = month
-    self.year = year
-    self.username = username
-    self.random_string = random_string
-    self.postal_code = postal_code
-    self.json_object = json_object
-    self.post_title = post_title
-    self.random_list_item = random_list_item
-    self.laravel_password = laravel_password
-    self.ion_auth_password = ion_auth_password
 
     def firstname(self):
     async with AIOFile("file.csv", 'r') as afp:
