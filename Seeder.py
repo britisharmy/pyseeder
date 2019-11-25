@@ -1,3 +1,8 @@
+import secrets
+import asyncio
+import random
+from aiofile import AIOFile, LineReader, Writer
+
 class Seeder:
   #default password for ion_auth,laravel and django
   #ion auth:: password :: $2y$08$200Z6ZZbp3RAEXoaWcMA6uJOFicwNZaqk4oDhqTUiFXFe63MG.Daa
@@ -47,7 +52,8 @@ class Seeder:
     print("Hello my name is " + self.name)
 
     def salutation(self):
-    print("Hello my name is " + self.name)
+    salut = ['Mr', 'Mrs', 'Ms', 'Dr', 'Sir']
+    return secrets.choice(salut)
 
     def gender(self):
     print("Hello my name is " + self.name)
