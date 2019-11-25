@@ -51,13 +51,24 @@ class Seeder:
     self.ion_auth_password = ion_auth_password
 
     def firstname(self):
-    print("Hello my name is " + self.name)
+    async with AIOFile("file.csv", 'r') as afp:
+        async for line in LineReader(afp):
+            #print(line[:10])
+            array = line.split(',')
+            first_item = array[0]
+            print(first_item)
 
     def lastname(self):
-    print("Hello my name is " + self.name)
+    async with AIOFile("file.csv", 'r') as afp:
+        async for line in LineReader(afp):
+            #print(line[:10])
+            array = line.split(',')
+            first_item = array[0]
+            print(first_item)
 
     def salutation(self):
-    print("Hello my name is " + self.name)
+    salut = ['Mr', 'Mrs', 'Ms', 'Dr', 'Sir']
+    return secrets.choice(salut)
 
     def gender(self):
     print("Hello my name is " + self.name)
@@ -82,10 +93,13 @@ class Seeder:
     
     #give range
     def numbers(self):
-    print("Hello my name is " + self.name)
+    #random from range
+    print (random.randrange(20, 50, 3)) 
+    #random from list
+    print (random.choice([1, 4, 8, 10, 3])) 
 
     def decimals(self):
-    print("Hello my name is " + self.name)
+    return float(decimal.Decimal(random.randrange(155, 389))/100)
 
     def address(self):
     print("Hello my name is " + self.name)

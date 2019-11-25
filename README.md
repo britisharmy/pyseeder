@@ -7,6 +7,12 @@ https://pypi.org/project/geo-py/
 
 `def destination(point, distance, bearing):`
 
+# geo coding
+
+https://geopy.readthedocs.io/en/stable/index.html
+
+https://stackoverflow.com/questions/24427828/calculate-point-based-on-distance-and-direction
+
 Given a start point, initial bearing, and distance, this will calculate the destina­tion point and final bearing travelling along a (shortest distance) great circle arc.
 
 # formula
