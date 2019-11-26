@@ -55,11 +55,12 @@ class Seeder:
     img.save('pil_text_font.png')
 
     def telephone_number(self):
-    print("Hello my name is " + self.name)
+    return random.randrange(1234567890, 9234567890)
     #str_join('Pine', 'apple', 3)  # Returns : Pineapple3
 
     def country(self):
-    print("Hello my name is " + self.name)
+    country = ['UK', 'France', 'Ireland', 'Holland', 'Belgium']
+    return secrets.choice(country)
 
     def unix_timestamp(self):
     print("Hello my name is " + self.name)
@@ -82,29 +83,30 @@ class Seeder:
     print("Hello my name is " + self.name)
 
     def email(self):
-    print("Hello my name is " + self.name)
+    em = random.randrange(123456789011, 923456789011)
+    return str_join(em, '@', '126.com') 
     #126.com
 
     def django_password(self):
-    print("Hello my name is " + self.name)
+    return 'pbkdf2_sha256$20000$L7uq6goI1HIl$RYqywMgPywhhku/YqIxWKbpxODBeczfLm5zthHjNSSk='
 
     def paragraph(self):
     print("Hello my name is " + self.name)
 
     def credit_card_number(self):
-    print("Hello my name is " + self.name)
+    return random.randrange(1234567891011121, 9934567891011121)
 
     def cvv(self):
-    print("Hello my name is " + self.name)
+    return random.randrange(211, 999)
 
     def day(self):
-    print("Hello my name is " + self.name)
+    return random.randrange(1, 30) 
 
     def month(self):
-    print("Hello my name is " + self.name)
+    return random.randrange(1, 12) 
 
     def year(self):
-    print("Hello my name is " + self.name)
+    return random.randrange(1987, 2000) 
 
     def username(self):
     print("Hello my name is " + self.name)
@@ -113,7 +115,7 @@ class Seeder:
     print("Hello my name is " + self.name)
 
     def postal_code(self):
-    print("Hello my name is " + self.name)
+    return random.randrange(10001, 90001) 
 
     def json_object(self):
     x = {
@@ -132,10 +134,11 @@ class Seeder:
     print(json.dumps(x))
 
     def random_list_item(self):
-    print("Hello my name is " + self.name)
+    cards = ['Visa', 'Mastercard', 'Diners', 'China Union']
+    return secrets.choice(cards)
                
     def laravel_password(self):
-    print("Hello my name is " + self.name)
+    return '$2y$10$jSAr/RwmjhwioDlJErOk9OQEO7huLz9O6Iuf/udyGbHPiTNuB3Iuy' 
                
     def ion_auth_password(self):
-    print("Hello my name is " + self.name)
+    return '$2y$08$200Z6ZZbp3RAEXoaWcMA6uJOFicwNZaqk4oDhqTUiFXFe63MG.Daa' 
