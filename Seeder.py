@@ -6,8 +6,10 @@ import secrets
 from datetime import datetime
 import string
 import uuid
+import csv
 from PIL import Image, ImageDraw, ImageFont
 from aiofile import AIOFile, LineReader, Writer
+import aiofiles
 
 
 class Seeder:
@@ -22,20 +24,15 @@ class Seeder:
   #validate excel file i.e sms numbers columns, empty spaces,unformatted numbers etc
 
     async def firstname():
-        async with AIOFile("surnames.csv", 'r') as afp:
-            async for line in LineReader(afp):
-            #print(line[:10])
-               array = line.split(',')
-               first_item = array[0]
-               print(first_item)
+         async with aiofiles.open('firstnames.csv') as csvfile:
+              readCSV = await csvfile.read()
+              return readCSV
 
     async def lastname():
-        async with AIOFile("surnames.csv", 'r') as afp:
-            async for line in LineReader(afp):
-            #print(line[:10])
-               array = line.split(',')
-               first_item = array[0]
-               print(first_item)
+        with open('surnames.csv') as csvfile:
+             readCSV = csv.reader(csvfile, delimiter=',')
+             for row in readCSV:
+              print(row[0],row[1])
 
     def salutation(self):
         salut = ['Mr', 'Mrs', 'Ms', 'Dr', 'Sir']
