@@ -8,8 +8,8 @@ import string
 import uuid
 import csv
 from PIL import Image, ImageDraw, ImageFont
-from aiofile import AIOFile, LineReader, Writer
 import aiofiles
+import re
 
 
 class Seeder:
@@ -33,7 +33,7 @@ class Seeder:
              readCSV = csv.reader(csvfile, delimiter=',')
              for row in readCSV:
               print(row[0],row[1])
-
+#async
     def salutation(self):
         salut = ['Mr', 'Mrs', 'Ms', 'Dr', 'Sir']
         return secrets.choice(salut)
@@ -83,9 +83,9 @@ class Seeder:
     def address(self):
         print("Hello my name is " + self.name)
 
-    def email(self):
+    def email():
         em = random.randrange(123456789011, 923456789011)
-        return str_join(em, '@', '126.com') 
+        return str(em)+'@'+'126.com' 
     #126.com
 
     def django_password(self):
@@ -143,15 +143,34 @@ class Seeder:
                
     def ion_auth_password():
         return '$2y$08$200Z6ZZbp3RAEXoaWcMA6uJOFicwNZaqk4oDhqTUiFXFe63MG.Daa' 
+    def random_word():
+        string = secrets.token_urlsafe(10)
+        convertedString = ""
+
+        p = re.compile('[aeiou0-9]')
+        vowelsAndNumbers = p.findall(string)
+        string = p.sub("",string)
+
+        i = 0
+        for c in string:    
+            convertedString += c + ''.join(vowelsAndNumbers[i:i+1])
+            i+=1
+
+        # if remaining vowels, add to convertedString
+        convertedString += ''.join(vowelsAndNumbers[i:])
+
+        return convertedString
 
 
 start_time = datetime.now()
 p1 = Seeder
 print(p1.random_list_item())
 loop = asyncio.get_event_loop()
-foo = loop.run_until_complete(p1.firstname())
-print(foo)
-p1.image()
+#foo = loop.run_until_complete(p1.lastname())
+#print(foo)
+#p1.image()
+print(p1.random_word())
+print(p1.email())
 #check for actors in async
 end_time = datetime.now()
 print('Duration: {}'.format(end_time - start_time))
